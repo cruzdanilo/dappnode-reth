@@ -1,0 +1,8 @@
+.vscode
+build_*
+.DS_Store
+.env
+*.log
+*.code-workspace
+.*-version*
+*.tgz
