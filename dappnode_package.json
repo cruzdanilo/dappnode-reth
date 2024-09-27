@@ -1,0 +1,38 @@
+{
+  "name": "reth.public.dappnode.eth",
+  "version": "0.0.1",
+  "upstreamVersion": "1.0.7",
+  "upstreamRepo": "paradigmxyz/reth",
+  "shortDescription": "Reth Ethereum client",
+  "description": "Reth (short for Rust Ethereum) is a new Ethereum full node implementation that is focused on being user-friendly, highly modular, as well as being fast and efficient. Reth is an Execution Layer (EL) and is compatible with all Ethereum Consensus Layer (CL) implementations that support the Engine API. It is originally built and driven forward by Paradigm, and is licensed under the Apache and MIT licenses.",
+  "author": "danilo neves cruz <cruzdanilo@gmail.com>",
+  "links": {
+    "api": "http://reth.public.dappnode:8545",
+    "apiEngine": "http://reth.public.dappnode:8551",
+    "homepage": "https://github.com/cruzdanilo/dappnode-reth"
+  },
+  "exposable": [
+    {
+      "name": "Reth JSON RPC",
+      "description": "JSON RPC endpoint for Reth Ethereum mainnet",
+      "serviceName": "reth",
+      "port": 8545
+    },
+    {
+      "name": "Reth JSON RPC (WS)",
+      "description": "JSON RPC WebSocket endpoint for Reth Ethereum mainnet",
+      "serviceName": "reth",
+      "port": 8546
+    }
+  ],
+  "bugs": { "url": "https://github.com/cruzdanilo/dappnode-reth/issues" },
+  "repository": { "type": "git", "url": "https://github.com/cruzdanilo/dappnode-reth.git" },
+  "globalEnvs": [{ "envs": ["CONSENSUS_CLIENT_MAINNET"], "services": ["reth"] }],
+  "requirements": { "minimumDappnodeVersion": "0.2.60" },
+  "architectures": ["linux/amd64", "linux/arm64"],
+  "categories": ["Blockchain"],
+  "license": "GPL-3.0",
+  "chain": "ethereum",
+  "type": "service",
+  "upstreamArg": "UPSTREAM_VERSION"
+}
