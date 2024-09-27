@@ -1,0 +1,27 @@
+version: "3.5"
+
+services:
+  reth:
+    build:
+      context: .
+      args:
+        UPSTREAM_VERSION: 1.0.7
+    restart: unless-stopped
+    image: ghcr.io/paradigmxyz/reth
+    ports:
+      - 9001:9001 # metrics
+      - 30303:30303 # eth/66 peering
+    volumes:
+      - data:/root/.local/share/reth/mainnet
+      - logs:/root/logs
+    container_name: reth
+    networks:
+      - dncore_network
+
+volumes:
+  data: {}
+  logs: {}
+
+networks:
+  dncore_network:
+    external: true
