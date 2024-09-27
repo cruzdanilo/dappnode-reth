@@ -1,5 +1,6 @@
 .vscode
 build_*
+docker-compose-tmp.yml
 .DS_Store
 .env
 *.log
