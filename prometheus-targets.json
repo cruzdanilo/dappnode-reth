@@ -1,0 +1,10 @@
+[
+  {
+    "labels": {
+      "package": "reth.reth.public.dappnode.eth",
+      "service": "reth",
+      "__metrics_path__": "/"
+    },
+    "targets": ["reth.reth.public.dappnode:9001"]
+  }
+]
